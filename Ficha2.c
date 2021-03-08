@@ -23,7 +23,6 @@ float multInt2 (int n, float m) {
 //3
 int mdc1 (int a, int b) {
     int mdc = 0, i;
-    //Coloca em max o maior dos dois elementos (a ou b)
     for (i = 1; i <= a && i <= b; i++) {
         if (a % i == 0 && b % i == 0)
             mdc = i;
