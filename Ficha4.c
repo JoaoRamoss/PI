@@ -38,9 +38,29 @@ int retiraVogais (char *s) {
     return 0;
 }
 
+int duplicaVogais (char *s) {
+    int i, count = 0;
+    for (i = 0; s[i] != 0; i++);
+
+    for (int j = 0; j < i; j++) {
+        if (check_vogal(s[j])) {
+            char aux = s[j];
+            for (int k = i; k > j; k--) {
+                s[k] = s[k-1];
+            }
+            i++;
+            s[j] = aux;
+            j++;
+            count++;
+        }
+    }
+    return count;
+}
+
 
 int main () {
-    char str[] = "Estaa e umaa string coom duuuplicadoos";
-    int count = retiraVogais(str);
+    char str[50] = "Esta e uma string com duplicados";
+    int count = duplicaVogais(str);
     printf("%s\n", str);
+    printf("Adicionados: %d\n", count);
 }
