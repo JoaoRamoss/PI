@@ -61,6 +61,6 @@ int duplicaVogais (char *s) {
 int main () {
     char str[50] = "Esta e uma string com duplicados";
     int count = duplicaVogais(str);
-    printf("%s\n", str);
+    printf("Resultado: %s\n", str);
     printf("Adicionados: %d\n", count);
 }
