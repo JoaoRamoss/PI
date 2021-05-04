@@ -56,3 +56,4 @@ void imprimeTurma (int ind[], Aluno t[], int N) {
         printf("Teste: %d\n", t[i].teste);
     }
 }
+
